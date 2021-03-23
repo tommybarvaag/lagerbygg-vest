@@ -35,7 +35,7 @@ export default function NavBar() {
 
 const DesktopNav = () => {
   const router = useRouter();
-  console.log(router);
+
   return (
     <Stack direction="row" spacing={4} alignItems="center">
       {NAV_ITEMS.map((navItem) => (

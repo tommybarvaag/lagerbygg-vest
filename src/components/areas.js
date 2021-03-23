@@ -3,7 +3,7 @@ import AreaCard from "./areaCard";
 
 export default function Areas() {
   return (
-    <Container maxW="container.xl" mb={6}>
+    <Container maxW="container.xl" mb={6} py={{ base: 10, md: 28 }}>
       <Heading fontSize="6xl">Våre lagerenheter</Heading>
       <SimpleGrid minChildWidth="360px" spacing="40px">
         <AreaCard />
