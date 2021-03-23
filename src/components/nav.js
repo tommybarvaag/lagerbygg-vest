@@ -2,7 +2,7 @@ import { ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon } from "@ch
 import { Box, Collapse, Flex, Icon, IconButton, Link, Popover, PopoverContent, PopoverTrigger, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import Logo from "./Logo";
+import Logo from "./logo";
 
 export default function NavBar() {
   const { isOpen, onToggle } = useDisclosure();
