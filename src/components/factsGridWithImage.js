@@ -7,7 +7,7 @@ export default function FactsGridWithImage() {
         flex={1}
         zIndex={0}
         display={{ base: "none", lg: "flex" }}
-        backgroundImage="url('https://usercontent.one/wp/nettside.lagerbyggalta.no/wp-content/uploads/2021/03/test1.jpg')"
+        backgroundImage="url('/images/storage-illustration.jpg')"
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"

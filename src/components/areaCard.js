@@ -7,7 +7,7 @@ export default function AreaCard() {
     <Center py={6}>
       <Box maxW="445px" w="full" bg="gray.50" boxShadow="2xl" rounded="md" p={6} overflow="hidden">
         <Box h="210px" bg="gray.100" mt={-6} mx={-6} mb={6} pos="relative">
-          <Image src={"https://usercontent.one/wp/nettside.lagerbyggalta.no/wp-content/uploads/2021/03/test1.jpg"} layout="fill" />
+          <Image src={"/images/storage-illustration.jpg"} layout="fill" />
         </Box>
         <Stack>
           <Flex>
