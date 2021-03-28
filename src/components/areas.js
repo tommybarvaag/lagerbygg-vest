@@ -17,7 +17,7 @@ export default function Areas() {
           tags={[
             { key: "Pris:", value: "2.490.000,- + omkostninger" },
             { key: "Areal", value: "BTA ca. 120 kvm" },
-            { key: "Fellesutgifter", value: "Ca. kr. 3000,-/år" },
+            { key: "Fellesutgifter", value: "Ca. kr. 3000,-/år" }
           ]}
         />
         <AreaCard
@@ -30,7 +30,7 @@ export default function Areas() {
           tags={[
             { key: "Pris:", value: "1.050.000,- + omkostninger" },
             { key: "Areal", value: "BTA ca. 72 kvm" },
-            { key: "Fellesutgifter", value: "Ca. kr. 3000,-/år" },
+            { key: "Fellesutgifter", value: "Ca. kr. 3000,-/år" }
           ]}
         />
       </SimpleGrid>

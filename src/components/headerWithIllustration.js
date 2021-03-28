@@ -2,11 +2,27 @@ import { AspectRatio, Button, Container, Flex, Heading, Stack, Text } from "@cha
 import NextLink from "next/link";
 import { Image } from "../components/image";
 
-export default function HeaderWithIllustration({ title, text, coloredTitle, primaryButtonHref, secondaryButtonHref, imgSrc }) {
+export default function HeaderWithIllustration({
+  title,
+  text,
+  coloredTitle,
+  primaryButtonHref,
+  secondaryButtonHref,
+  imgSrc
+}) {
   return (
     <Container maxW="5xl" overflow="hidden">
-      <Stack textAlign="center" align="center" spacing={{ base: 8, md: 10 }} py={{ base: 8, md: 16 }}>
-        <Heading fontWeight={600} fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }} lineHeight="110%">
+      <Stack
+        textAlign="center"
+        align="center"
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 8, md: 16 }}
+      >
+        <Heading
+          fontWeight={600}
+          fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
+          lineHeight="110%"
+        >
           {title}{" "}
           <Text as="span" color="red.400">
             {coloredTitle}
@@ -19,7 +35,16 @@ export default function HeaderWithIllustration({ title, text, coloredTitle, prim
           <Stack direction="row">
             {primaryButtonHref ? (
               <NextLink href={primaryButtonHref} passHref>
-                <Button as="a" rounded="full" size="lg" fontWeight="normal" px={6} colorScheme="red" bg="red.400" _hover={{ bg: "red.500" }}>
+                <Button
+                  as="a"
+                  rounded="full"
+                  size="lg"
+                  fontWeight="normal"
+                  px={6}
+                  colorScheme="red"
+                  bg="red.400"
+                  _hover={{ bg: "red.500" }}
+                >
                   Les mer
                 </Button>
               </NextLink>

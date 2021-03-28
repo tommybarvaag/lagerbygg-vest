@@ -1,12 +1,48 @@
-import { AspectRatio, Badge, Box, Center, Flex, Heading, Link, Stack, Tag, TagLabel, Text, VStack } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Badge,
+  Box,
+  Center,
+  Flex,
+  Heading,
+  Link,
+  Stack,
+  Tag,
+  TagLabel,
+  Text,
+  VStack
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Image } from "./image";
 
-export default function AreaCard({ href, imgSrc, title, text, isAvailable, isSold, isNew, tags = [] }) {
+export default function AreaCard({
+  href,
+  imgSrc,
+  title,
+  text,
+  isAvailable,
+  isSold,
+  isNew,
+  tags = []
+}) {
   return (
     <NextLink href={href} passHref>
-      <Center as={Link} textDecoration="none" _hover={{ textDecoration: "none" }} cursor="pointer" py={6}>
-        <Box maxW="445px" w="full" bg="gray.50" boxShadow="2xl" rounded="md" p={6} overflow="hidden">
+      <Center
+        as={Link}
+        textDecoration="none"
+        _hover={{ textDecoration: "none" }}
+        cursor="pointer"
+        py={6}
+      >
+        <Box
+          maxW="445px"
+          w="full"
+          bg="gray.50"
+          boxShadow="2xl"
+          rounded="md"
+          p={6}
+          overflow="hidden"
+        >
           <Box h="300px" bg="gray.100" mt={-6} mx={-6} mb={6} pos="relative">
             <Image src={imgSrc} layout="fill" />
           </Box>

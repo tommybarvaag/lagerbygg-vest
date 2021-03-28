@@ -44,25 +44,25 @@ export default function NewSlider({
   text,
   images,
   variants = {
-    enter: (direction) => {
+    enter: direction => {
       return {
         x: direction > 0 ? 1000 : -1000,
         opacity: 0,
-        height: "auto",
+        height: "auto"
       };
     },
     center: {
       x: 0,
       opacity: 1,
-      height: "auto",
+      height: "auto"
     },
-    exit: (direction) => {
+    exit: direction => {
       return {
         x: direction < 0 ? 1000 : -1000,
         opacity: 0,
-        height: "auto",
+        height: "auto"
       };
-    },
+    }
   },
   ...other
 }) {
@@ -74,7 +74,7 @@ export default function NewSlider({
   // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
   const index = wrap(0, images.length, page);
 
-  const paginate = (newDirection) => {
+  const paginate = newDirection => {
     setPage([page + newDirection, newDirection]);
   };
 
@@ -95,7 +95,7 @@ export default function NewSlider({
           exit="exit"
           transition={{
             x: { type: "spring", stiffness: 250, damping: 30 },
-            y: { type: "spring", stiffness: 250, damping: 30 },
+            y: { type: "spring", stiffness: 250, damping: 30 }
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -110,7 +110,7 @@ export default function NewSlider({
             }
           }}
           style={{
-            width: "100%",
+            width: "100%"
           }}
         >
           <Link href={images[index]} isExternal>
@@ -121,7 +121,12 @@ export default function NewSlider({
       <PrevNextButton className="next" right="10px" onClick={() => paginate(1)}>
         {"‣"}
       </PrevNextButton>
-      <PrevNextButton className="prev" left="10px" transform="scale(-1)" onClick={() => paginate(-1)}>
+      <PrevNextButton
+        className="prev"
+        left="10px"
+        transform="scale(-1)"
+        onClick={() => paginate(-1)}
+      >
         {"‣"}
       </PrevNextButton>
     </Wrapper>

@@ -17,5 +17,8 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }

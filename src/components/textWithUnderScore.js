@@ -13,7 +13,7 @@ export default function TextWithUnderscore({ children }) {
         bottom: 1,
         left: 0,
         bg: "red.500",
-        zIndex: -1,
+        zIndex: -1
       }}
     >
       {children}

@@ -31,10 +31,10 @@ const ImageWithChakra = chakra(
         ? {
             height,
             layout: layout === "fill" ? "intrinsic" : layout,
-            width,
+            width
           }
         : {
-            layout: "fill",
+            layout: "fill"
           };
 
     return (

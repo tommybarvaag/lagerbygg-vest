@@ -1,5 +1,18 @@
 import { ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Collapse, Flex, Icon, IconButton, Link, Popover, PopoverContent, PopoverTrigger, Stack, Text, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Collapse,
+  Flex,
+  Icon,
+  IconButton,
+  Link,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  Stack,
+  Text,
+  useDisclosure
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import Logo from "./logo";
@@ -12,14 +25,25 @@ export default function NavBar() {
       <Flex bg="gray.50" color="black" minH="60px" py={{ base: 2 }} px={{ base: 4 }} align="center">
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Logo />
-          <Flex display={{ base: "none", md: "flex" }} flexGrow="1" justifyContent="flex-end" ml={10}>
+          <Flex
+            display={{ base: "none", md: "flex" }}
+            flexGrow="1"
+            justifyContent="flex-end"
+            ml={10}
+          >
             <DesktopNav />
           </Flex>
         </Flex>
         <Flex display={{ base: "flex", md: "none" }}>
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <CloseIcon color="black" w={3} h={3} /> : <HamburgerIcon color="black" w={5} h={5} />}
+            icon={
+              isOpen ? (
+                <CloseIcon color="black" w={3} h={3} />
+              ) : (
+                <HamburgerIcon color="black" w={5} h={5} />
+              )
+            }
             variant="ghost"
             aria-label="Toggle Navigation"
           />
@@ -38,7 +62,7 @@ const DesktopNav = () => {
 
   return (
     <Stack direction="row" spacing={4} alignItems="center">
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger="hover" placement="bottom-start">
             <PopoverTrigger>
@@ -50,7 +74,7 @@ const DesktopNav = () => {
                   color={router.pathname === navItem.href ? "red.500" : "black"}
                   _hover={{
                     textDecoration: "none",
-                    color: "red.500",
+                    color: "red.500"
                   }}
                 >
                   {navItem.label}
@@ -61,7 +85,7 @@ const DesktopNav = () => {
             {navItem.children && (
               <PopoverContent border={0} boxShadow="xl" bg="gray.50" p={4} rounded="xl" minW="sm">
                 <Stack>
-                  {navItem.children.map((child) => (
+                  {navItem.children.map(child => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
                 </Stack>
@@ -105,7 +129,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 const MobileNav = () => {
   return (
     <Stack bg="gray.50" p={4} display={{ md: "none" }}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
@@ -124,19 +148,27 @@ const MobileNavItem = ({ label, children, href }) => {
           justify="space-between"
           align="center"
           _hover={{
-            textDecoration: "none",
+            textDecoration: "none"
           }}
         >
           <Text fontWeight={600} color="black">
             {label}
           </Text>
-          {children && <Icon as={ChevronDownIcon} transition="all .25s ease-in-out" transform={isOpen ? "rotate(180deg)" : ""} w={6} h={6} />}
+          {children && (
+            <Icon
+              as={ChevronDownIcon}
+              transition="all .25s ease-in-out"
+              transform={isOpen ? "rotate(180deg)" : ""}
+              w={6}
+              h={6}
+            />
+          )}
         </Flex>
       </NextLink>
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack mt={2} pl={4} borderLeft={1} borderStyle="solid" borderColor="black" align="start">
           {children &&
-            children.map((child) => (
+            children.map(child => (
               <NextLink key={child.label} href={child.href} passHref>
                 <Link py={2}>{child.label}</Link>
               </NextLink>
@@ -150,10 +182,10 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Kontakt oss",
-    href: "/kontakt-oss",
+    href: "/kontakt-oss"
   },
   {
     label: "Områder",
-    href: "/omraade",
-  },
+    href: "/omraade"
+  }
 ];

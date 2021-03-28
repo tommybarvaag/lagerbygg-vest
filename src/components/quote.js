@@ -2,7 +2,14 @@ import { Avatar, Box, Stack, Text } from "@chakra-ui/react";
 
 export default function Quote({ text, name, title }) {
   return (
-    <Stack bg="gray.100" py={16} px={8} spacing={{ base: 8, md: 10 }} align="center" direction="column">
+    <Stack
+      bg="gray.100"
+      py={16}
+      px={8}
+      spacing={{ base: 8, md: 10 }}
+      align="center"
+      direction="column"
+    >
       <Text fontSize={{ base: "xl", md: "2xl" }} textAlign="center" maxW="3xl">
         {text}
       </Text>

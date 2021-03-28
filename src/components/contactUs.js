@@ -1,5 +1,18 @@
 import { EmailIcon } from "@chakra-ui/icons";
-import { Button, Flex, FormControl, FormLabel, Heading, HStack, Image, Input, Radio, RadioGroup, Stack, Textarea } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Heading,
+  HStack,
+  Image,
+  Input,
+  Radio,
+  RadioGroup,
+  Stack,
+  Textarea
+} from "@chakra-ui/react";
 
 export default function ContactUs() {
   return (

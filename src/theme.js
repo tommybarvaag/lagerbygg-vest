@@ -7,20 +7,26 @@ const breakpoints = createBreakpoints({
   sm: "40em",
   md: "52em",
   lg: "64em",
-  xl: "80em",
+  xl: "80em"
 });
 
 const theme = extendTheme({
   config: { initialColorMode: "light", useSystemColorMode: false },
   colors: {
-    black: "#16161D",
+    black: "#16161D"
   },
   fonts,
   breakpoints,
   icons: {
     logo: {
       path: (
-        <svg width="3000" height="3163" viewBox="0 0 3000 3163" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="3000"
+          height="3163"
+          viewBox="0 0 3000 3163"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <rect width="3000" height="3162.95" fill="none" />
           <path
             d="M1470.89 1448.81L2170 2488.19H820V706.392H2170L1470.89 1448.81ZM1408.21 1515.37L909.196 2045.3V2393.46H1998.84L1408.21 1515.37Z"
@@ -28,36 +34,36 @@ const theme = extendTheme({
           />
         </svg>
       ),
-      viewBox: "0 0 3000 3163",
-    },
+      viewBox: "0 0 3000 3163"
+    }
   },
   styles: {
-    global: (props) => ({
+    global: props => ({
       body: {
-        backgroundColor: "gray.50",
+        backgroundColor: "gray.50"
       },
       "#__next": {
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "column"
       },
       main: {
-        flexGrow: 1,
+        flexGrow: 1
       },
       html: {
-        scrollBehavior: "smooth",
-      },
-    }),
+        scrollBehavior: "smooth"
+      }
+    })
   },
   variants: {
     "with-shadow": {
       bg: "red.400",
-      boxShadow: "0 0 2px 2px #efdfde",
+      boxShadow: "0 0 2px 2px #efdfde"
     },
     // 4. We can override existing variants
-    solid: (props) => ({
-      bg: props.colorMode === "dark" ? "red.300" : "red.500",
-    }),
-  },
+    solid: props => ({
+      bg: props.colorMode === "dark" ? "red.300" : "red.500"
+    })
+  }
 });
 
 export default theme;
