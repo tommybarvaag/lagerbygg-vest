@@ -3,7 +3,7 @@ import TextWithUnderscore from "./textWithUnderScore";
 
 export default function HeadingWithUnderscore({ children, heading }) {
   return (
-    <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}>
+    <Heading lineHeight={1.1} fontWeight={600} fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }} mb={6}>
       <TextWithUnderscore>{heading}</TextWithUnderscore>
       {children}
     </Heading>

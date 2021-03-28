@@ -8,12 +8,12 @@ export default function HeroWithFullPageImage({ title, imgSrc, primaryButtonHref
 
   React.useEffect(() => {
     setDimensions([window.innerWidth, window.innerHeight]);
-  });
+  }, []);
 
   return (
     <Flex w="full" position="relative" h="100vh" overflow="hidden">
       <Box position="absolute" h="100%" w="100vw" zIndex="-999">
-        <Image alt="Mountains" dimensions={dimensions} src={imgSrc} layout="fill" objectFit="cover" quality={75} />
+        <Image alt="Mountains" dimensions={dimensions} src={imgSrc} layout="fill" nextImageObjectFit="cover" meh="hi" quality={75} />
       </Box>
       <VStack w="full" justify="center" px={useBreakpointValue({ base: 4, md: 8 })} bgGradient="linear(to-r, blackAlpha.700, transparent)">
         <Container maxW="7xl">

@@ -1,5 +1,6 @@
-import { Flex, Text, VStack } from "@chakra-ui/layout";
+import { Flex, Link, Text, VStack } from "@chakra-ui/layout";
 import * as React from "react";
+import Carousel from "../../components/carousel";
 import ContactUs from "../../components/contactUs";
 import HeadingWithUnderscore from "../../components/headingWithUnderscore";
 import HeroWithFullPageImage from "../../components/heroWithFullPageImage";
@@ -13,10 +14,10 @@ export default function Galteraasen(props) {
         secondaryButtonHref="/kontakt-oss"
         imgSrc="/images/storage-illustration.jpg"
       />
-      <Flex maxW="7xl" justifyContent="center" alignItems="center" margin="0 auto">
+      <Flex maxW="7xl" flexDirection="column" justifyContent="center" alignItems="center" margin="0 auto">
         <VStack p={8} maxWidth="2xl" alignItems="flex-start">
           <HeadingWithUnderscore heading="Galteråsen" />
-          <Text fontSize>
+          <Text>
             Helland Gruppen Næringsbygg AS har gleden av å tilby 7 næringsseksjoner som kommer til salgs i Galteråsen Næringspark i Alver. Bygningene er under
             planlegging og kan tilpasses leietaker / kjøpers behov.
           </Text>
@@ -57,7 +58,6 @@ export default function Galteraasen(props) {
             <br />
             når du kan eie?
           </HeadingWithUnderscore>
-
           <Text>
             Som eier av egne lokaler disponerer du til enhver tid lokalene, og bestemmer selv hvordan innredning og planløsning skal være. Alle utgifter er
             forutsigbare, og du tar selv del i antatt verdistigning. Med dages rentenivå og generell mangel på mindre seksjoner i leiemarkedet, er dette en unik
@@ -67,9 +67,17 @@ export default function Galteraasen(props) {
             Det planlegges byggestart Q3 2021, og planlagt ferdigstillelse er Q2 2022. Byggestart er betinget av et tilstrekkelig antall forhåndssalg og datoene
             kan bli forskjøvet.
           </Text>
-          <Text>Bilder er ment som illustrasjon og kan avvike fra ferdig produkt.</Text>
           <Text>Ta kontakt med oss for mer informasjon og hvordan vi sammen kan finne løsninger for dine lokaler.</Text>
+          <HeadingWithUnderscore heading="Dokumenter" />
+          <Link href="/documents/galteraasen-naeringstomt.pdf" isExternal>
+            Galteråsen Næringstomt.pdf
+          </Link>
         </VStack>
+        <Carousel
+          title="Illustrasjoner fra Galteråsen"
+          text="Bilder er ment som illustrasjon og kan avvike fra ferdig produkt."
+          images={["/images/galteraasen-2D-floor-plan-1-story.jpg", "/images/galteraasen-2D-floor-plan-2-story.jpg", "/images/storage-illustration.jpg"]}
+        />
       </Flex>
       <ContactUs />
     </>
