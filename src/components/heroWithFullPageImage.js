@@ -1,16 +1,23 @@
 import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Stack,
-  Text,
-  useBreakpointValue,
-  VStack
+    Box,
+    Button,
+    Container,
+    Flex,
+    Stack,
+    Text,
+    useBreakpointValue,
+    VStack
 } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 import NextLink from "next/link";
 import * as React from "react";
 import { Image } from "./image";
+
+const ImageWrapper = styled(Box)`
+  > div {
+    height: 100%;
+  }
+`;
 
 export default function HeroWithFullPageImage({
   title,
@@ -26,7 +33,7 @@ export default function HeroWithFullPageImage({
 
   return (
     <Flex w="full" position="relative" h="100vh" overflow="hidden">
-      <Box position="absolute" h="100%" w="100vw" zIndex="-999">
+      <ImageWrapper position="absolute" h="100%" w="100vw" zIndex="-999">
         <Image
           alt="Hero"
           dimensions={dimensions}
@@ -36,7 +43,7 @@ export default function HeroWithFullPageImage({
           meh="hi"
           quality={75}
         />
-      </Box>
+      </ImageWrapper>
       <VStack
         w="full"
         justify="center"
