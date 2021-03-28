@@ -1,4 +1,4 @@
-import { Flex, Text, VStack } from "@chakra-ui/layout";
+import { Flex, Link, Text, VStack } from "@chakra-ui/layout";
 import * as React from "react";
 import Carousel from "../../components/carousel";
 import ContactUs from "../../components/contactUs";
