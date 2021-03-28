@@ -37,6 +37,7 @@ const swipePower = (offset, velocity) => {
 const Wrapper = styled(Box)`
   width: 100%;
   position: relative;
+  overflow: hidden;
 `;
 
 export default function NewSlider({
