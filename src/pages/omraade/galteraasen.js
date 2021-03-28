@@ -22,10 +22,6 @@ export default function Galteraasen(props) {
             planlegging og kan tilpasses leietaker / kjøpers behov.
           </Text>
           <Text>
-            Helland Gruppen Næringsbygg AS har gleden av å tilby 7 næringsseksjoner som kommer til salgs i Galteråsen Næringspark i Alver. Bygningene er under
-            planlegging og kan tilpasses leietaker / kjøpers behov.
-          </Text>
-          <Text>
             Bygget deles inn i egne seksjoner på ca. BTA ca. 120 kvm. (6×20 mtr.) Hver seksjon er innenfor aksesystemet på 120, 240, 360 kvm. osv. det er
             mesanin på 60 M2 som ekstra etasje per seksjon. Det kan kjøpes og sammenslås flere seksjoner om ønskelig. Se vedlagt tegning som viser inndeling av
             seksjoner.
