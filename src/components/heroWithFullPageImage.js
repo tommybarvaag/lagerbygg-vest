@@ -18,7 +18,7 @@ export default function HeroWithFullPageImage({
   primaryButtonHref,
   secondaryButtonHref
 }) {
-  const [dimensions, setDimensions] = React.useState([1920, 1080]);
+  const [dimensions, setDimensions] = React.useState([2560, 1440]);
 
   React.useEffect(() => {
     setDimensions([window.innerWidth, window.innerHeight]);
@@ -28,7 +28,7 @@ export default function HeroWithFullPageImage({
     <Flex w="full" position="relative" h="100vh" overflow="hidden">
       <Box position="absolute" h="100%" w="100vw" zIndex="-999">
         <Image
-          alt="Mountains"
+          alt="Hero"
           dimensions={dimensions}
           src={imgSrc}
           layout="fill"
