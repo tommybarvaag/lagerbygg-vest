@@ -12,7 +12,7 @@ export default function TextWithUnderscore({ children }) {
         position: "absolute",
         bottom: 1,
         left: 0,
-        bg: "red.500",
+        bg: "red.400",
         zIndex: -1
       }}
     >

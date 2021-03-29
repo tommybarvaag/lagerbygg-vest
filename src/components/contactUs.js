@@ -1,4 +1,3 @@
-import { EmailIcon } from "@chakra-ui/icons";
 import {
   Button,
   Flex,
@@ -13,6 +12,7 @@ import {
   Stack,
   Textarea
 } from "@chakra-ui/react";
+import { FiMail } from "react-icons/fi";
 
 export default function ContactUs() {
   return (
@@ -42,7 +42,7 @@ export default function ContactUs() {
             <Textarea placeholder="Mine øsnker..." />
           </FormControl>
           <Stack spacing={6}>
-            <Button colorScheme="orange" variant="solid" rightIcon={<EmailIcon />}>
+            <Button colorScheme="red" bg="red.400" variant="solid" rightIcon={<FiMail />}>
               Send
             </Button>
           </Stack>
