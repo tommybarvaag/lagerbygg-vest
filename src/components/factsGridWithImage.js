@@ -35,30 +35,31 @@ export default function FactsGridWithImage() {
                 fontSize="xl"
                 color="gray.500"
               >
-                Lager
+                Lagerbygg Vest
               </Text>
               <Heading color="white" mb={5} fontSize={{ base: "3xl", md: "5xl" }}>
                 Utsøkte lagerenheter
               </Heading>
               <Text fontSize="xl" color="gray.400">
-                Lagerseksjonene er perfekt for deg som trenger lagring av campingvogn, bobil, båt,
-                scooter osv. Dette er et konsept som vi tror vil passe for både en forbruker og
-                håndverker.
+                Lagerbygg Vest er et nytt og spennende tilbud for næring og private. Topp moderne
+                lager bygg på flere sentrale plasser i Hordaland. Flexible løsninger og tilpasninger
+                for lagring, garasje, logistikk, produksjon, kontor eller kombinasjonslokaler.
               </Text>
             </Box>
-
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-              {stats.map(stat => (
-                <Box key={stat.title}>
-                  <Text fontFamily="heading" fontSize="3xl" color="white" mb={3}>
-                    {stat.title}
-                  </Text>
-                  <Text fontSize="xl" color="gray.400">
-                    {stat.content}
-                  </Text>
-                </Box>
-              ))}
-            </SimpleGrid>
+            {stats?.length > 0 ? (
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+                {stats.map(stat => (
+                  <Box key={stat.title}>
+                    <Text fontFamily="heading" fontSize="3xl" color="white" mb={3}>
+                      {stat.title}
+                    </Text>
+                    <Text fontSize="xl" color="gray.400">
+                      {stat.content}
+                    </Text>
+                  </Box>
+                ))}
+              </SimpleGrid>
+            ) : null}
           </Stack>
           <Flex flex={1} />
         </Stack>
@@ -73,37 +74,38 @@ const StatsText = ({ children }) => (
   </Text>
 );
 
-const stats = [
-  {
-    title: "10+ år",
-    content: (
-      <>
-        <StatsText>Erfaring</StatsText> hos de involverte partnerne
-      </>
-    )
-  },
-  {
-    title: "24/7",
-    content: (
-      <>
-        <StatsText>Tilgang</StatsText> til lager
-      </>
-    )
-  },
-  {
-    title: "13%",
-    content: (
-      <>
-        <StatsText>Billigere</StatsText> enn tradisjonell lagring
-      </>
-    )
-  },
-  {
-    title: "15+",
-    content: (
-      <>
-        <StatsText>Lagerløsninger</StatsText> tilgjengelig
-      </>
-    )
-  }
-];
+const stats = [];
+// const stats = [
+//   {
+//     title: "10+ år",
+//     content: (
+//       <>
+//         <StatsText>Erfaring</StatsText> hos de involverte partnerne
+//       </>
+//     )
+//   },
+//   {
+//     title: "24/7",
+//     content: (
+//       <>
+//         <StatsText>Tilgang</StatsText> til lager
+//       </>
+//     )
+//   },
+//   {
+//     title: "13%",
+//     content: (
+//       <>
+//         <StatsText>Billigere</StatsText> enn tradisjonell lagring
+//       </>
+//     )
+//   },
+//   {
+//     title: "23+",
+//     content: (
+//       <>
+//         <StatsText>Lagerløsninger</StatsText> planert
+//       </>
+//     )
+//   }
+// ];

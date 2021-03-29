@@ -21,7 +21,7 @@ export default async (req, res) => {
     sendgridMail.setApiKey(apiKey);
 
     await sendgridMail.send({
-      to: process.env.NODE_ENV === "development" ? "tommy@barvaag.com" : "post@lagerbyggvest.no",
+      to: "post@lagerbyggvest.no",
       from: req.body.email,
       subject: `lagerbyggvest.no: Kontakt fra ${req.body.name}`,
       html: `<div>
