@@ -1,5 +1,6 @@
 import {
   Box,
+  Container,
   Flex,
   HStack,
   Icon,
@@ -12,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
-import { Container } from "./Container";
 import Logo from "./logo";
 
 function ListHeader({ children }) {
