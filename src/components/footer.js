@@ -34,7 +34,13 @@ export default function Footer() {
       alignItems="center"
     >
       <Container as={Stack} maxW="6xl" py={10} bg={useColorModeValue("gray.200", "gray.900")}>
-        <SimpleGrid columns={{ base: 1, sm: 3, md: 3 }} spacing={{ base: 24, sm: 16, md: 24 }}>
+        <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} spacing={{ base: 24, sm: 16, lg: 16 }}>
+          <Stack align="flex-start">
+            <ListHeader>Kontakt informasjon</ListHeader>
+            <Text>Idrettsveien 3, 5936 Manger</Text>
+            <Link href="tel:90928237">90928237</Link>
+            <Link href="mailto:post@lagerbyggvest.no">post@lagerbyggvest.no</Link>
+          </Stack>
           <Stack align="flex-start">
             <ListHeader>Lagerbygg Vest AS</ListHeader>
             <NextLink href="/" passHref>
@@ -56,6 +62,7 @@ export default function Footer() {
               <Link>Olsvollstranda</Link>
             </NextLink>
           </Stack>
+
           <Stack align="flex-start">
             <ListHeader>Følg oss</ListHeader>
             <HStack>
