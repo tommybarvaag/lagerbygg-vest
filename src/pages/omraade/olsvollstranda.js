@@ -1,5 +1,6 @@
 import { Flex, Link, Text, VStack } from "@chakra-ui/layout";
 import * as React from "react";
+import AreaStat from "../../components/areaStat";
 import Carousel from "../../components/carousel";
 import ContactUs from "../../components/contactUs";
 import HeadingWithUnderscore from "../../components/headingWithUnderscore";
@@ -23,6 +24,7 @@ export default function Olsvollstranda(props) {
       >
         <VStack p={8} maxWidth="2xl" alignItems="flex-start">
           <HeadingWithUnderscore heading="Olsvollstranda" />
+          <AreaStat price="1.050.000,-" commonExpenses="3.000,-" area="72 kvm" />
           <Text>
             Helland Gruppen Næringsbygg AS har gleden av å tilby 16 næringsseksjoner som kommer til
             salgs på Olsvollstranda Næringspark i Alver. Bygningene er under planlegging og kan

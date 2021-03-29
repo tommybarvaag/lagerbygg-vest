@@ -1,5 +1,6 @@
 import { Flex, Link, Text, VStack } from "@chakra-ui/layout";
 import * as React from "react";
+import AreaStat from "../../components/areaStat";
 import Carousel from "../../components/carousel";
 import ContactUs from "../../components/contactUs";
 import HeadingWithUnderscore from "../../components/headingWithUnderscore";
@@ -23,6 +24,7 @@ export default function Galteraasen(props) {
       >
         <VStack p={8} maxWidth="2xl" alignItems="flex-start">
           <HeadingWithUnderscore heading="Galteråsen" />
+          <AreaStat price="2.490.000,-" commonExpenses="3.000,-" area="120 kvm" />
           <Text>
             Helland Gruppen Næringsbygg AS har gleden av å tilby 7 næringsseksjoner som kommer til
             salgs i Galteråsen Næringspark i Alver. Bygningene er under planlegging og kan tilpasses

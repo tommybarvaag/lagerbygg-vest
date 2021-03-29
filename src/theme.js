@@ -51,6 +51,9 @@ const theme = extendTheme({
       },
       html: {
         scrollBehavior: "smooth"
+      },
+      "p + h2": {
+        margin: "32px 0 !important"
       }
     })
   },
