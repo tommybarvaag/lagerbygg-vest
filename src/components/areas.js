@@ -5,7 +5,7 @@ import HeadingWithUnderscore from "./headingWithUnderscore";
 export default function Areas() {
   return (
     <Container maxW="container.xl" mb={6} py={{ base: 10, md: 28 }}>
-      <HeadingWithUnderscore heading="Våre lagerenheter" />
+      <HeadingWithUnderscore heading="Områder" />
       <SimpleGrid minChildWidth={{ base: "320px", md: "360px" }} spacing={4}>
         <AreaCard
           href="/omraade/galteraasen"
