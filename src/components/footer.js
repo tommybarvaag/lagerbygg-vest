@@ -60,10 +60,10 @@ export default function Footer() {
             <ListHeader>Følg oss</ListHeader>
             <HStack>
               <Link href="https://www.facebook.com/Lagerbygg-Vest-108543304664898/" isExternal>
-                <Icon w={8} h={8} as={FiFacebook} />
+                <Icon w={6} h={6} as={FiFacebook} />
               </Link>
               <Link href="https://www.instagram.com/lagerbyggvest/" isExternal>
-                <Icon w={8} h={8} as={FiInstagram} />
+                <Icon w={6} h={6} as={FiInstagram} />
               </Link>
             </HStack>
           </Stack>
