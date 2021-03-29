@@ -1,12 +1,12 @@
 import {
-    Box,
-    Button,
-    Container,
-    Flex,
-    Stack,
-    Text,
-    useBreakpointValue,
-    VStack
+  Box,
+  Button,
+  Container,
+  Flex,
+  Stack,
+  Text,
+  useBreakpointValue,
+  VStack
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
@@ -40,7 +40,6 @@ export default function HeroWithFullPageImage({
           src={imgSrc}
           layout="fill"
           nextImageObjectFit="cover"
-          meh="hi"
           quality={75}
         />
       </ImageWrapper>

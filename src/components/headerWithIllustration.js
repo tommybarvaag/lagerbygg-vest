@@ -61,7 +61,7 @@ export default function HeaderWithIllustration({
         {imgSrc ? (
           <Flex flex={1} justify="center" align="center" position="relative" w="full">
             <AspectRatio ratio={16 / 9} rounded="2xl" boxShadow="xl" width="full" overflow="hidden">
-              <Image alt="Hero Image" fit="cover" src={imgSrc} />
+              <Image alt="Hero Image" fit="cover" src={imgSrc} quality={75} />
             </AspectRatio>
           </Flex>
         ) : null}
