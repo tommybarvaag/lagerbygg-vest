@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
           useSystemColorMode: theme.config.useSystemColorMode
         }}
       >
-        <Layout>
+        <Layout {...pageProps}>
           <Component {...pageProps} />
         </Layout>
       </ColorModeProvider>

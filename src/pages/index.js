@@ -42,3 +42,18 @@ export default function Home(props) {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {
+      page: {
+        openGraph: {
+          title: "Hjem",
+          description:
+            "Vi presenterer Galteråsen og Olsvollstranda som tilsammen gir 23 næringsseksjoner i Alver. Bygningene er under planlegging og kan tilpasses leietaker / kjøpers behov.",
+          image: "https://lagerbyggvest.no/images/storage-illustration.jpg"
+        }
+      }
+    }
+  };
+}

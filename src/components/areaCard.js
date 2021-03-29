@@ -85,13 +85,7 @@ export default function AreaCard({
           {googleMapsEmbedUrl ? (
             <Box h="250px" bg="gray.100" mt={6} mx={-6} mb={-6} pos="relative">
               <AspectRatio ratio={{ base: 4 / 3, md: 16 / 9 }}>
-                <iframe
-                  src={googleMapsEmbedUrl}
-                  width="400"
-                  height="300"
-                  allowfullscreen=""
-                  loading="lazy"
-                ></iframe>
+                <iframe src={googleMapsEmbedUrl} width="400" height="300" loading="lazy"></iframe>
               </AspectRatio>
             </Box>
           ) : null}

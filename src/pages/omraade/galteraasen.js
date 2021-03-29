@@ -106,3 +106,18 @@ export default function Galteraasen(props) {
     </>
   );
 }
+
+export async function getStaticProps() {
+  return {
+    props: {
+      page: {
+        openGraph: {
+          title: "Galteråsen",
+          description:
+            "Helland Gruppen Næringsbygg AS har gleden av å tilby 7 næringsseksjoner som kommer til salgs i Galteråsen Næringspark i Alver. Bygningene er under planlegging og kan tilpasses leietaker / kjøpers behov.",
+          image: "https://lagerbyggvest.no/images/storage-illustration.jpg"
+        }
+      }
+    }
+  };
+}
