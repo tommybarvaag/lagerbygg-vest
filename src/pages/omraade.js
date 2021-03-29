@@ -6,7 +6,7 @@ export default function Area(props) {
   return (
     <>
       <Areas />
-      <ContactUs />
+      <ContactUs location="Områder" />
     </>
   );
 }

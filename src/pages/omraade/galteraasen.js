@@ -100,7 +100,7 @@ export default function Galteraasen(props) {
           ]}
         />
       </Flex>
-      <ContactUs />
+      <ContactUs location="Galteråsen" />
     </>
   );
 }

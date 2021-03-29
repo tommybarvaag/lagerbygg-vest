@@ -38,7 +38,7 @@ export default function Home(props) {
         secondaryButtonHref="/kontakt-oss"
         imgSrc="/images/storage-illustration.jpg"
       />
-      <ContactUs />
+      <ContactUs location="Forside" />
     </>
   );
 }

@@ -84,7 +84,7 @@ export default function Olsvollstranda(props) {
           images={["/images/storage-illustration.jpg", "/images/storage-illustration.jpg"]}
         />
       </Flex>
-      <ContactUs />
+      <ContactUs location="Olsvollstranda" />
     </>
   );
 }

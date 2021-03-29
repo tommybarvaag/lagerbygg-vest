@@ -4,7 +4,7 @@ import ContactUs from "../components/contactUs";
 export default function Contact(props) {
   return (
     <>
-      <ContactUs />
+      <ContactUs location="Kontakt oss" />
     </>
   );
 }
