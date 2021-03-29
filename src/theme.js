@@ -54,6 +54,9 @@ const theme = extendTheme({
       },
       "p + h2": {
         margin: "32px 0 !important"
+      },
+      ".grecaptcha-badge": {
+        visibility: "hidden"
       }
     })
   },

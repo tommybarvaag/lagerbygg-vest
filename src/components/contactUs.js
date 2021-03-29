@@ -156,6 +156,17 @@ function ContactUsForm({ location }) {
           >
             Send
           </Button>
+          <Text fontSize="xs">
+            Denne siden er beskyttet av reCAPTCHA og Google sine{" "}
+            <Link isExternal textDecoration="underline" href="https://policies.google.com/privacy">
+              personvernregler
+            </Link>
+            .{" "}
+            <Link isExternal textDecoration="underline" href="https://policies.google.com/terms">
+              Vilkår for bruk
+            </Link>{" "}
+            gjelder.
+          </Text>
           {formState.isSubmitSuccessful ? (
             <AnimatePresence>
               <Alert
