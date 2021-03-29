@@ -23,12 +23,14 @@ import { validateEmail, validateTelephone } from "../utils/formValidationUtils";
 export default function ContactUs({ location = "frontpage" }) {
   const { handleSubmit, errors, register, formState } = useForm();
 
-  function onSubmit(values) {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        resolve();
-      }, 3000);
+  async function onSubmit(values) {
+    await fetch("/api/sendMail", {
+      method: "POST",
+      cache: "no-cache",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(values)
     });
   }
 
@@ -44,6 +46,18 @@ export default function ContactUs({ location = "frontpage" }) {
       >
         <Stack spacing={4} w="full" maxW="md">
           <Heading fontSize={{ base: "3xl", md: "5xl" }}>Ta kontakt</Heading>
+          <FormControl id="name" isInvalid={errors.name}>
+            <FormLabel htmlFor="name">Navn</FormLabel>
+            <Input
+              name="name"
+              type="text"
+              placeholder="Ditt navn"
+              ref={register({
+                required: true
+              })}
+            />
+            <FormErrorMessage>{errors.name ? "Feltet er påkrevd." : null}</FormErrorMessage>
+          </FormControl>
           <FormControl id="email" isInvalid={errors.email}>
             <FormLabel htmlFor="email">E-post</FormLabel>
             <Input
@@ -101,9 +115,9 @@ export default function ContactUs({ location = "frontpage" }) {
               </HStack>
             </RadioGroup>
           </FormControl>
-          <FormControl id="text">
-            <FormLabel>Text</FormLabel>
-            <Textarea placeholder="Mine ønsker..." />
+          <FormControl id="message">
+            <FormLabel htmlFor="message">Text (valgfritt)</FormLabel>
+            <Textarea name="message" placeholder="Mine ønsker..." ref={register} />
           </FormControl>
           <FormControl id="location">
             <Input name="location" type="hidden" value={location} ref={register} />
